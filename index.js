@@ -1,6 +1,5 @@
 // expecting time to be a string in the format like '8:15' or '12:30'
 function convertTimeToWords(time) {
-  // TODO: real code goes here!
   const splited_time = time.split(':')
   const hour = Number(splited_time[0])
   const minutes = Number(splited_time[1])
@@ -41,8 +40,6 @@ function convertTimeToWords(time) {
   }
  
  
- 
- 
   if (time === '0:00') {
     return 'midnight';
   }
@@ -51,7 +48,6 @@ function convertTimeToWords(time) {
   if (time === '12:00') {
     return 'midday';
   }
- 
  
   if (minutes <= 30) {
     if (minutes === 15) {
@@ -65,8 +61,6 @@ function convertTimeToWords(time) {
     return `${time_dict[total_minutes - minutes]} to ${time_dict[hour + 1]}`
   }
  
- 
-  return 'half past eight';
  }
  
  
